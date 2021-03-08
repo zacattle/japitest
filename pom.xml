@@ -8,6 +8,16 @@ xsi:schemaLocation="http://maven.apache.org/POM/4.0.0 https://maven.apache.org/x
   <description>java api test</description>
   
   <dependencies>
+  
+  
+        <!-- logback 会自动添加 logback-core 和 slf4j-api 包-->
+		<dependency>
+		    <groupId>ch.qos.logback</groupId>
+		    <artifactId>logback-classic</artifactId>
+		    <version>1.2.3</version>
+		</dependency>
+		
+		<!-- junite5 -->
 	    <dependency>
 	        <groupId>org.junit.platform</groupId>
 	        <artifactId>junit-platform-launcher</artifactId>
@@ -33,7 +43,7 @@ xsi:schemaLocation="http://maven.apache.org/POM/4.0.0 https://maven.apache.org/x
 		    <scope>test</scope>
 		</dependency>
 
-	</dependencies>
+</dependencies>
   
   
 </project>
