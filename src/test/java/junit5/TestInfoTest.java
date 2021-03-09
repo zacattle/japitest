@@ -12,7 +12,6 @@ import org.junit.jupiter.api.extension.ExtendWith;
 
 import junit5.RandomParametersExtension.Random;
 
-import static org.junit.Assert.assertNotEquals;
 import static org.junit.jupiter.api.Assertions.assertEquals;
 import static org.junit.jupiter.api.Assertions.assertTrue;
 

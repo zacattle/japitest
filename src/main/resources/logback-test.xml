@@ -1,0 +1,17 @@
+<configuration debug="false" packagingData="true">
+  <!-- debug="true" 表示是否打印logback内部运行状态信息，不影响其他的 -->
+  
+  <statusListener class="ch.qos.logback.core.status.OnConsoleStatusListener" />  
+  
+  <appender name="STDOUT" class="ch.qos.logback.core.ConsoleAppender">
+    <!-- encoders are assigned the type
+         ch.qos.logback.classic.encoder.PatternLayoutEncoder by default -->
+    <encoder>
+      <pattern>时间：%d{HH:mm:ss.SSS} 线程:[%thread] %-5level 日志类名：%logger{36} 日志信息： %msg%n</pattern>
+    </encoder>
+  </appender>
+
+  <root level="debug">
+    <appender-ref ref="STDOUT" />
+  </root>
+</configuration>
