@@ -10,6 +10,7 @@ public class ConfigFileLocationTest {
 	public static void main(String[] args) {
 		// 自定义配置文件地址
 		System.setProperty(ContextInitializer.CONFIG_FILE_PROPERTY, "E:\\workspace\\eclipse\\japitest\\src\\main\\resources\\logback-test2.xml");
+		// 
 		Logger log = LoggerFactory.getLogger(ConfigFileLocationTest.class);
 		log.info("测试");
 		
