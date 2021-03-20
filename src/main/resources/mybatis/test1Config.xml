@@ -1,0 +1,45 @@
+<?xml version="1.0" encoding="UTF-8" ?>
+<!DOCTYPE configuration
+    PUBLIC "-//mybatis.org//DTD Config 3.0//EN"
+    "http://mybatis.org/dtd/mybatis-3-config.dtd">
+    
+<configuration>
+
+    <!-- 自定义属性，可在xml文件中通过ognl表达式调用,必须放在配置文件最前面-->
+   <properties resource="mybatis/config.properties">
+     <property name="username" value="root"/> 
+     <property name="password" value="manager"/> 
+     <property name="driver" value="com.mysql.jdbc.Driver"/> 
+   </properties>
+    
+    <!-- 配置信息 -->
+    <settings>
+        <setting name="logImpl" value="SLF4J"/>
+    </settings>
+    
+    <!-- 配置包的别名，这样我们在mapper中定义时，就不需要使用类的全限定名称，只需要使用类名即可 -->
+    <typeAliases>
+        <package name="mybatis.model"/>
+    </typeAliases>
+    
+
+    
+    <!-- 数据库配置 -->
+    <environments default="development">
+        <environment id="development">
+            <transactionManager type="JDBC"/>
+            <dataSource type="POOLED">
+                <property name="driver" value="${driver}"/>
+                <property name="url" value="jdbc:mysql://localhost:3306/mybatis_test"/>
+                <property name="username" value="${username}"/>
+                <property name="password" value="${password}"/>
+            </dataSource>
+        </environment>
+    </environments>
+
+    <!-- mybatis的SQL语句和映射配置文件 -->
+    <mappers>
+        <mapper resource="mybatis/xmlMapper/test1.xml"/>
+    </mappers>
+    
+</configuration>
